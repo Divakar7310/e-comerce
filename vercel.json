@@ -10,7 +10,7 @@
         "use": "@vercel/static-build"
       },
       {
-        "src": "backend",
+        "src": "backend.package.json",
         "use": "@vercel/node"
       }
     ]
