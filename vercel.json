@@ -2,22 +2,16 @@
     "version": 2,
     "builds": [
       {
-        "src": "/admin/package.json",
+        "src": "admin/package.json",
+        "use": "@vercel/static-build"
+      },
+      {
+        "src": "frontend/package.json",
+        "use": "@vercel/static-build"
+      },
+      {
+        "src": "backend",
         "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/admin/.*",
-        "dest": "/admin/index.html"
-      },
-      {
-        "src": "/api/.*",
-        "dest": "/backend/index.js"
-      },
-      {
-        "src": "/.*",
-        "dest": "/frontend/src/index.html"
       }
     ]
   }
