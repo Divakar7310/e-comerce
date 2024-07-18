@@ -1,0 +1,51 @@
+{
+    "version": 2,
+    "projects": {
+      "admin": {
+        "source": "/admin",
+        "builds": [
+          {
+            "src": "package.json",
+            "use": "@vercel/node"
+          }
+        ],
+        "routes": [
+          {
+            "src": "/admin/(.*)",
+            "dest": "/admin/$1"
+          }
+        ]
+      },
+      "frontend": {
+        "source": "/frontend",
+        "builds": [
+          {
+            "src": "package.json",
+            "use": "@vercel/node"
+          }
+        ],
+        "routes": [
+          {
+            "src": "/(.*)",
+            "dest": "/frontend/$1"
+          }
+        ]
+      },
+      "backend": {
+        "source": "/backend",
+        "builds": [
+          {
+            "src": "package.json",
+            "use": "@vercel/node"
+          }
+        ],
+        "routes": [
+          {
+            "src": "/api/(.*)",
+            "dest": "/backend/$1"
+          }
+        ]
+      }
+    }
+  }
+  
